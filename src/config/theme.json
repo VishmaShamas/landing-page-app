@@ -1,0 +1,135 @@
+{
+  "brandKit":{
+     "content":{
+        "copyright":"© NetZylo Inc. All rights reserved | Powered by $DOMAINZ",
+        "footer":"Enter your email to unlock early access to our Solana-based utility token $DOMAINZ — use to purchase Web3 names at huge discounts, activate new AI agent features, and launch your own token with our no-code tools.",
+        "disclaimers":""
+     },
+     "logos":{
+        "primary":"/images/og-image.png",
+        "icon":"https://www.netzylo.com/apple-touch-icon.png",
+        "favicon":"https://www.netzylo.com/favicon.png"
+     },
+     "seo":{
+        "title":"NetZylo: AI-Powered Web3 Domain Services",
+        "description":"Explore AI-powered premium Web3 domain registration by NetZylo. Secure blockchain, crypto, and NFT domains for the decentralized web.",
+        "loginTitle":"NetZylo Login | Access Your Web3 Dashboard",
+        "loginDescription":"Login to NetZylo to manage your Web3 domains and crypto wallets effortlessly. Secure and convenient access to your blockchain assets."
+     },
+     "colors":{
+        "background":"#0A0A0A",
+        "container":"#1C1C1C",
+        "accent":"#FF2E2E",
+        "buttonText":"#FFFFFF",
+        "foreground":"#E0E0E0"
+     },
+     "domainName":".backend",
+     "inputUrl":"https://netzylo.com",
+     "kitName":"NetZylo | AI-Powered Premium Web3 Domain Provider",
+     "website":"https://www.netzylo.com",
+     "brandSummary":"NetZylo is an AI-powered Web3 domain provider offering premium blockchain, crypto, and NFT domain registration services. With a focus on decentralization, NetZylo utilizes smart contracts to provide future-proof digital asset solutions and innovative blockchain engagement tools.",
+     "address":"",
+     "toneOfVoice":"Neutral",
+     "socials":[
+        {
+           "platform":"Facebook",
+           "url":"https://www.facebook.com/NetZyloInc/"
+        },
+        {
+           "platform":"Twitter",
+           "url":"https://twitter.com/NetZylo/"
+        },
+        {
+           "platform":"LinkedIn",
+           "url":"https://www.linkedin.com/company/netzylo/"
+        }
+     ],
+     "privacyPolicy":"https://www.netzylo.com/privacy",
+     "termsOfService":"https://www.netzylo.com/terms-and-conditions"
+  },
+  "profile":{
+     "seo":{
+        "title":"NetZylo: AI-Powered Web3 Domain Services",
+        "description":"Explore AI-powered premium Web3 domain registration by NetZylo. Secure blockchain, crypto, and NFT domains for the decentralized web."
+     },
+     "bio":"NetZylo is an AI-powered Web3 domain provider offering premium blockchain, crypto, and NFT domain registration services. With a focus on decentralization, NetZylo utilizes smart contracts to provide future-proof digital asset solutions and innovative blockchain engagement tools.",
+     "primaryEmailAddress":"mujtabashamasdev@gmail.com",
+     "links":{
+        "twitter":"https://twitter.com/NetZylo/",
+        "instagram":"",
+        "discord":"",
+        "linkedin":"https://www.linkedin.com/company/netzylo/",
+        "telegram":"",
+        "facebook":"https://www.facebook.com/NetZyloInc/",
+        "_id":"68540724a18759c90c0c3c92"
+     },
+     "primaryWeb3WalletId":"0x79d5A859a1D8C622667E1f54C17A99412b1E5250",
+     "username":"",
+     "email":"mujtabashamasdev@gmail.com",
+     "coverPhoto":"",
+     "profileImage":"",
+     "country":"",
+     "city":"",
+     "address":"",
+     "website":"https://www.netzylo.com",
+     "tldWhiteLabelLogo":"",
+     "faqs":[
+        {
+           "_id":"68540724a18759c90c0c3c93",
+           "question":"What exactly is a Web3 domain?",
+           "answer":"A Web3 domain, also known as a decentralized domain or blockchain domain, is a unique identifier on a blockchain that replaces traditional URLs. It enables users to access decentralized websites, apps, and content without relying on traditional DNS systems."
+        },
+        {
+           "_id":"68540724a18759c90c0c3c94",
+           "question":"What are the advantages of using a Web3 domain?",
+           "answer":"Web3 domains offer several benefits, including enhanced security, censorship resistance, and ownership control. They are not controlled by centralized authorities, reducing the risk of domain hijacking or censorship. Additionally, they can simplify cryptocurrency transactions by allowing users to send funds to human-readable addresses."
+        },
+        {
+           "_id":"68540724a18759c90c0c3c95",
+           "question":"What are the capabilities of Web3 domains?",
+           "answer":"Web3 domains provide various capabilities, including linking to decentralized websites (dApps), receiving cryptocurrencies directly, and enabling personalized subdomains. They also offer a seamless way to interact with blockchain-based services, NFT marketplaces, and other decentralized applications."
+        },
+        {
+           "_id":"68540724a18759c90c0c3c96",
+           "question":"Are there any renewal fees for Web3 domains?",
+           "answer":"Unlike traditional domains, NetZylo Web3 domains don't have renewal fees. Once you've acquired a Web3 domain, you have ongoing ownership without the need to pay annual renewal fees, making them a cost-effective choice."
+        }
+     ]
+  },
+  "theme":{
+     "background":"#0A0A0A",
+     "text":"#FFFFFF",
+     "buttons":"#FF2E2E",
+     "icons":"#FF4D4D",
+     "container":"#1C1C1C"
+  },
+  "config":{
+     "signin":{
+        "modalTitle":"NetZylo Login | Access Your Web3 Dashboard",
+        "modalTitleIcon":"https://www.netzylo.com/favicon.png",
+        "backgroundImage":"",
+        "tosLink":"https://www.netzylo.com/terms-and-conditions",
+        "privacyLink":"https://www.netzylo.com/privacy",
+        "requireTOS":false,
+        "darkMode":false
+     },
+     "seoSettings":{
+        "favicon":"https://www.netzylo.com/favicon.png",
+        "default":{
+           "title":"NetZylo: AI-Powered Web3 Domain Services",
+           "description":"Explore AI-powered premium Web3 domain registration by NetZylo. Secure blockchain, crypto, and NFT domains for the decentralized web."
+        },
+        "login":{
+           "title":"NetZylo Login | Access Your Web3 Dashboard",
+           "description":"Login to NetZylo to manage your Web3 domains and crypto wallets effortlessly. Secure and convenient access to your blockchain assets."
+        }
+     },
+     "favicon":"https://www.netzylo.com/favicon.png",
+     "zwallet":{
+        "heading1":"",
+        "heading2":"",
+        "profilePhoto":"",
+        "coverPhoto":""
+     }
+  }
+}

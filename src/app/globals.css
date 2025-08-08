@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom spacing */
+  --spacing-section: 6rem;
+  
+  /* Custom border radius */
+  --radius-theme: 1rem;
+  --radius-theme-lg: 1.5rem;
+  --radius-theme-xl: 2rem;
+  
+  /* Animation keyframes */
+  --animation-float: float 6s ease-in-out infinite;
+  --animation-glow: glow 2s ease-in-out infinite alternate;
+  --animation-slide-up: slideUp 0.8s ease-out;
+  --animation-fade-in: fadeIn 1s ease-out;
+}
+
+:root {
+  /* Default theme colors - will be overridden by JavaScript */
+  --theme-bg: #08090d;
+  --theme-container: #f37cbf;
+  --theme-accent: #3ed1ce;
+  --theme-text: #564df0;
+  --theme-button: #000000;
+  --theme-button-text: #ffffff;
+  
+  /* Font variables */
+  --font-geist-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-geist-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+  background: var(--theme-bg);
+  color: var(--theme-text);
+  font-family: var(--font-geist-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px var(--theme-accent); }
+  100% { box-shadow: 0 0 40px var(--theme-accent), 0 0 60px var(--theme-accent); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Base component styles */
+@layer components {
+  .btn-primary {
+    @apply relative px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+    background: linear-gradient(135deg, var(--theme-button), color-mix(in srgb, var(--theme-button) 70%, #333 30%));
+    color: var(--theme-button-text);
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--theme-button) 30%, transparent 70%);
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--theme-button) 70%, #333 30%), var(--theme-button));
+  }
+
+  .btn-secondary {
+    @apply relative px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105;
+    background: linear-gradient(135deg, transparent, color-mix(in srgb, var(--theme-accent) 10%, transparent 90%));
+    border: 2px solid var(--theme-accent);
+    color: var(--theme-accent);
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--theme-accent) 20%, transparent 80%);
+  }
+  
+  .btn-secondary:hover {
+    background: linear-gradient(135deg, var(--theme-accent), color-mix(in srgb, var(--theme-accent) 80%, var(--theme-container) 20%));
+    color: var(--theme-button);
+    box-shadow: 0 12px 40px color-mix(in srgb, var(--theme-accent) 40%, transparent 60%);
+  }
+
+  .theme-card {
+    @apply rounded-2xl p-8 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--theme-container) 15%, transparent 85%), color-mix(in srgb, var(--theme-accent) 10%, transparent 90%));
+    color: var(--theme-text);
+    box-shadow: 0 20px 60px color-mix(in srgb, var(--theme-container) 20%, transparent 80%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .theme-card:hover {
+    box-shadow: 0 30px 80px color-mix(in srgb, var(--theme-container) 40%, transparent 60%);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--theme-container) 25%, transparent 75%), color-mix(in srgb, var(--theme-accent) 15%, transparent 85%));
+  }
+
+  .unified-background {
+    /* Fallback for older browsers */
+    background: var(--theme-bg);
+    
+    /* Modern gradient with color mixing */
+    background: 
+      linear-gradient(180deg, 
+        var(--theme-bg) 0%,
+        color-mix(in srgb, var(--theme-bg) 80%, var(--theme-accent) 20%) 25%,
+        color-mix(in srgb, var(--theme-bg) 70%, var(--theme-container) 30%) 40%,
+        color-mix(in srgb, var(--theme-container) 10%, transparent 90%) 55%,
+        color-mix(in srgb, var(--theme-accent) 5%, transparent 95%) 70%,
+        color-mix(in srgb, var(--theme-bg) 80%, var(--theme-accent) 20%) 85%,
+        var(--theme-bg) 100%
+      );
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .unified-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--theme-accent) 8%, transparent 92%), transparent 40%),
+      radial-gradient(circle at 80% 50%, color-mix(in srgb, var(--theme-container) 8%, transparent 92%), transparent 40%),
+      radial-gradient(circle at 40% 80%, color-mix(in srgb, var(--theme-text) 6%, transparent 94%), transparent 40%);
+    animation: float 12s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  .hero-gradient {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .floating-element {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-element:nth-child(1) {
+    animation-delay: -2s;
+  }
+  
+  .floating-element:nth-child(2) {
+    animation-delay: -4s;
+  }
+
+  .section-spacing {
+    padding-top: var(--spacing-section);
+    padding-bottom: var(--spacing-section);
+  }
+
+  .container-responsive {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, var(--theme-accent), var(--theme-container));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .section-separator {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(62, 209, 206, 0.3), transparent);
+    margin: 2rem 0;
+  }
+  
+  /* Smooth section transitions */
+  section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--theme-accent), transparent);
+    opacity: 0.3;
+  }
+  
+  section:last-child::after {
+    display: none;
+  }
+}
